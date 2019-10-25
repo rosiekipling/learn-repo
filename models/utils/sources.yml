@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+
+  - name: airbnb
+    database: learn_raw  # Tell dbt to look for the source in the "raw" database
+    tables:
+      - name: listings
+      - name: reviews
