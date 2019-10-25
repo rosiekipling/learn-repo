@@ -1,0 +1,93 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
+select
+  amenities,
+  url,
+  require_guest_profile_picture,
+  neighbourhood_cleansed,
+  calendar_updated,
+  access,
+  summary,
+  host_verifications,
+  review_scores_cleanliness,
+  neighbourhood,
+  neighbourhood_group_cleansed,
+  host_about,
+  first_review,
+  country,
+  calendar_last_scraped,
+  is_superhost,
+  room_type,
+  street,
+  space,
+  review_scores_rating,
+  property_type,
+  host_location,
+  requires_license,
+  minimum_nights,
+  latitude,
+  experiences_offered,
+  city,
+  instant_bookable,
+  review_scores_accuracy,
+  response_time,
+  require_guest_phone_verification,
+  market,
+  host_since,
+  beds,
+  host_neighbourhood,
+  host_has_profile_pic,
+  bed_type,
+  availability_30,
+  is_business_travel_ready,
+  zipcode,
+  number_of_reviews,
+  name,
+  has_availability,
+  cleaning_fee,
+  monthly_price,
+  maximum_nights,
+  availability_365,
+  weekly_price,
+  security_deposit,
+RESPONSE_RATE
+,DESCRIPTION
+,SMART_LOCATION
+,NOTES
+,IS_LOCATION_EXACT
+,EXTRA_PEOPLE
+,HOUSE_RULES
+,REVIEW_SCORES_COMMUNICATION
+,STATE
+,REVIEW_SCORES_VALUE
+,REVIEW_SCORES_LOCATION
+,price
+,JURISDICTION_NAMES
+,GUESTS_INCLUDED
+,LICENSE
+,INTERACTION
+,HOST_NAME
+,HOST_IDENTITY_VERIFIED
+,COUNTRY_CODE
+,BEDROOMS
+,AVAILABILITY_90
+,TRANSIT
+,LAST_REVIEW
+,ID as listing_id
+,REVIEW_SCORES_CHECKIN
+,HOST_ID
+,BATHROOMS
+,SQUARE_FEET
+,SCRAPE
+,LONGITUDE
+,LAST_SCRAPED
+,CANCELLATION_POLICY
+,AVAILABILITY_60
+,ACCOMMODATES
+,ACCEPTANCE_RATE
+from
+{{ source('airbnb','listings') }}
